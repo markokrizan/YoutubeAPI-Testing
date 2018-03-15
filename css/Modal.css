@@ -1,0 +1,11 @@
+#klikLogin:hover {
+    cursor: pointer;
+}
+
+#klikRegistracija:hover{
+    cursor: pointer;
+}
+
+.beloNav{
+    color: white !important;
+}

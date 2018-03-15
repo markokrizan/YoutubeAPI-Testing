@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>MarkoTube | Pocetna </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/AdvancedSearch.css">
+  <link rel="stylesheet" type="text/css" href="css/navOverwrite.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/4.4.0/bootbox.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/Index.css">
+  <link rel="stylesheet" type="text/css" href="css/Login.css">
+  <link rel="stylesheet" type="text/css" href="css/SignUp.css">
+    <link rel="stylesheet" type="text/css" href="css/Modal.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <script type="text/javascript" src="js/IndexTest.js"></script>
+    <script type="text/javascript" src="js/Modal.js"></script>
+    <script type="text/javascript" src="js/Data.js"></script>
+  <script type="text/javascript" src="js/Login.js"></script>
+    <script type="text/javascript" src="js/SignUp.js"></script>
+    <script type="text/javascript" src="js/Najgledaniji.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+    <script src='https://cdn.rawgit.com/botmonster/jquery-bootpag/master/lib/jquery.bootpag.min.js'></script>
+    
+    
+  <!--
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" crossorigin="anonymous">
+  -->
+  
+</head>
+<body>
+    <!------------------------------------------NAV------------------------------------------->
+<nav id = "glavniMeni" class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="Index.html">
+    
+        <!--MarkoTube-->
+        <img src="images/logo2.png">
+        
+      </a>  
+         <!-------------------------------------advSrc-------------------------------------->
+      <div class="input-group" id="adv-search">
+        <input type="text" id = "PretragaPolje" class="form-control" placeholder="Pretrazi sadrzaj" />
+        <div class="input-group-btn">
+            <div class="btn-group" role="group">
+                <div class="dropdown dropdown-lg">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><span class="caret"></span></button>
+                    <div class="dropdown-menu dropdown-menu-right" role="menu">
+                        <form class="form-horizontal" role="form">
+                            <div class="form-group">
+                                <label for="filter">Sortiraj po:</label>
+                                <select class="form-control">
+                                    <option value="0" selected>Datumu od najnovijeg</option>
+                                    <option value="1">Datumu od najstarijeg</option>
+                                    <option value="2">Broj pregleda od najviseg</option>
+                                    <option value="3">Broj pregleda od najmanjeg</option>
+                                    <option value="4">Broj lajkova od najviseg</option>
+                                    <option value="5">Broj lajkova od najmanjeg</option>
+                                </select>
+                            </div>
+                            <button id = "SortBtn" type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                            </form>
+                    </div>
+                </div>
+                <button id = "PretragaBtn" type="button" class="btn btn-primary"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
+                </div>
+         </div>
+        </div> 
+      </div>
+       <!-------------------------------------advSrc------------------------------------->
+    <div class="collapse navbar-collapse" id="myNavbar">       
+          <ul class="nav navbar-nav navbar-right">
+            <li ><a class = "beloNav" id = "klikRegistracija" href="#"><span  class="glyphicon glyphicon-user beloNav"></span> Registruj se</a></li>
+            <li ><a class = "beloNav" id = "klikLogin" href="#"><span  class="glyphicon glyphicon-log-in beloNav"></span> Uloguj se</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+    <!------------------------------------------NAV------------------------------------------->
+    <div id = "kontejnerJumbotron" class = "container-fluid">
+        <div class="jumbotron">   
+                <h1 id ="welcomeNaslov">Dobro došli</h1>
+            
+            </div>
+            
+    
+    </div>
+    
+    <div class ="container">
+        <div class = "row">
+        <div id = "videoHolder"  class = "col-md-5">
+            <video id="videoPocetna" width="100%">
+                <source src="images/Despacito.mp4">
+            </video>
+            <button id = "pp"><span class = "glyphicon glyphicon-play"></span></button> 
+            <button id = "b"><span class = "glyphicon glyphicon-resize-full"></span></button>
+            <button id = "n"><span class = "glyphicon glyphicon-resize-small"></span></button>
+        </div>
+        <div id = "najgledanijiOpis" class = "col-md-7">
+                <h4>Najgledaniji video: <a href="Video.html?VideoId=kJQP7kiw5Fk">Despacito</a></h4>
+                <h4>Broj pregleda: 4,800,682,399</h4>
+                <h4>Korisnik: <a href = "User.html?imeKanala=LuisFonsiVEVO">LuisFonsiVEVO</a></h4>
+        </div>
+    
+    </div>
+    
+    
+    </div>
+    
+    
+    
+    <h2 id ="trendingNaslov">Trending</h2>
+    <div id="glavni" class = "container-fluid">  
+
+
+
+            
+
+
+         
+
+    </div> 
+    
+    <div id = "kontejnerPaginacija" class = "text-center">
+        
+<!--
+     <ul class="pagination">
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+                <span class="sr-only">Previous</span>
+              </a>
+            </li>
+            <li class="page-item active"><a class="page-link" href="#">1</a></li>
+            <li class="page-item"><a class="page-link" href="#">2</a></li>
+            <li class="page-item"><a class="page-link" href="#">3</a></li>
+            <li class="page-item">
+              <a class="page-link" href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+                <span class="sr-only">Next</span>
+              </a>
+            </li>
+          </ul>
+-->
+    </div>
+    
+<!--    <p id = "testKontejner"></p>-->
+    
+    
+    <footer  class="container-fluid text-center navbar navbar-fixed-bottom">
+      <p>OWP/WD Projekat: Marko Križan SF10/2015</p>
+    </footer>
+    
+    
+    <!----------------------------------------MODAL BOXES--------------------------->
+    
+    <div id = "modalLogin">
+        
+        <div class="container">   
+            <div class="row">
+                <div class="col-sm-6 col-md-4 col-md-offset-4">
+                    <div class="account-wall">
+                        <span id = "izadjiLogin" class="glyphicon glyphicon-remove"></span>
+                        <div id="my-tab-content" class="tab-content">
+                                <div class="tab-pane active" id="login">
+                                <img class="profile-img" src="images/login.png" alt="">
+                                <form class="form-signin" action="" method="">
+                                    <input id="userNameInput" type="text" class="form-control" placeholder="Korisnicko ime" required autofocus>
+                                    <input id="passwordInput" type="password" class="form-control" placeholder="Lozinka" required>
+                                    <button id="logInSubmit" type="button" class="btn btn-primary btn-lg btn-block login-button">Uloguj se</button>                 
+                                </form>                         
+                                     <a id = "SignUpLink">Nemas nalog?</a>
+                                </div>                   
+                            </div>               
+                    </div>            
+                </div>        
+            </div>   
+    
+    </div>
+        
+    </div>
+    
+    <div id = "modalSignUp">
+                <div class="container">
+                    <div class="row main">
+                        
+                        <div id = "kontejnerRegistracija" class="main-login main-center">
+                          <span id = "izadjiSignUp" class="glyphicon glyphicon-remove"></span>
+                            <div class="panel-heading">
+                               <div class="panel-title text-center">
+                                    <img class="profile-img" src="images/signup.png" alt="">
+
+                                </div>
+                            </div> 
+                            <form class="form-horizontal" method="post" action="#">
+
+                                <div class="form-group">
+                                    <label for="ime" class="cols-sm-2 control-label">Ime</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                            <input  type="text" class="form-control" name="ime" id="ime"  placeholder="Unesite ime"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="name" class="cols-sm-2 control-label">Prezime</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control" name="prezime" id="prezime"  placeholder="Unesite prezime"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email" class="cols-sm-2 control-label">Email</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control" name="email" id="email"  placeholder="Unesite Email adresu"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="korisnicko" class="cols-sm-2 control-label">Korisnicko ime</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control" name="korisnicko" id="korisnicko"  placeholder="Unesite korisniko ime"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="lozinka" class="cols-sm-2 control-label">Lozinka</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                            <input type="password" class="form-control" name="lozinka" id="lozinka"  placeholder="Unesite lozinku"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="confirm" class="cols-sm-2 control-label">Ponovite lozinku</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                            <input type="password" class="form-control" name="ponoviLozinku" id="ponoviLozinku"  placeholder="PonoviteLozinku"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group ">
+                                    <button id="RegSubmit" type="button" class="btn btn-primary btn-lg btn-block login-button">Registruj se</button>
+                                </div>
+                                <div class="login-register">
+                                    <a id = "login">Uloguj se</a>
+                                 </div>
+                            </form>
+                        </div>
+                    </div>
+            </div>
+
+    </div>
+    
+    <div class="SignUp2" style="display:none;">
+      <form class="form" role="form">
+        <div class="form-group">
+                                    <label for="ime" class="cols-sm-2 control-label">Ime</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                            <input  type="text" class="form-control" name="ime" id="ime"  placeholder="Unesite ime"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="name" class="cols-sm-2 control-label">Prezime</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control" name="prezime" id="prezime"  placeholder="Unesite prezime"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email" class="cols-sm-2 control-label">Email</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control" name="email" id="email"  placeholder="Unesite Email adresu"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="korisnicko" class="cols-sm-2 control-label">Korisnicko ime</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+                                            <input type="text" class="form-control" name="korisnicko" id="korisnicko"  placeholder="Unesite korisniko ime"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="lozinka" class="cols-sm-2 control-label">Lozinka</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                            <input type="password" class="form-control" name="lozinka" id="lozinka"  placeholder="Unesite lozinku"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="confirm" class="cols-sm-2 control-label">Ponovite lozinku</label>
+                                    <div class="cols-sm-10">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+                                            <input type="password" class="form-control" name="ponoviLozinku" id="ponoviLozinku"  placeholder="PonoviteLozinku"/>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                
+    
+      </form>
+    </div>
+    
+    
+
+</body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+          <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css">
+        <link rel="stylesheet" href="css/SignUp.css" type="text/css">
+		<!-- Website CSS style -->
+		<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+		<!-- Website Font style -->
+        <!--u ovim fontovima su fa slicice -->
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+		
+		<!-- Google Fonts -->
+		<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <script type="text/javascript" src="js/SignUp.js"></script>
+        
+
+		<title>MarkoTube | SignUp</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="row main">
+				
+				<div id = "kontejnerRegistracija" class="main-login main-center">
+                    <div class="panel-heading">
+                       <div class="panel-title text-center">
+                            <img class="profile-img" src="images/signup.png" alt="">
+
+                        </div>
+                    </div> 
+					<form class="form-horizontal" method="post" action="#">
+						
+						<div class="form-group">
+							<label for="ime" class="cols-sm-2 control-label">Ime</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input  type="text" class="form-control" name="ime" id="ime"  placeholder="Unesite ime"/>
+								</div>
+							</div>
+						</div>
+                        
+                        <div class="form-group">
+							<label for="name" class="cols-sm-2 control-label">Prezime</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="prezime" id="prezime"  placeholder="Unesite prezime"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="email" class="cols-sm-2 control-label">Email</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="email" id="email"  placeholder="Unesite Email adresu"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="korisnicko" class="cols-sm-2 control-label">Korisnicko ime</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+									<input type="text" class="form-control" name="korisnicko" id="korisnicko"  placeholder="Unesite korisniko ime"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="lozinka" class="cols-sm-2 control-label">Lozinka</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<input type="password" class="form-control" name="lozinka" id="lozinka"  placeholder="Unesite lozinku"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<label for="confirm" class="cols-sm-2 control-label">Ponovite lozinku</label>
+							<div class="cols-sm-10">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+									<input type="password" class="form-control" name="ponoviLozinku" id="ponoviLozinku"  placeholder="PonoviteLozinku"/>
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group ">
+							<button id="RegSubmit" type="button" class="btn btn-primary btn-lg btn-block login-button">Registruj se</button>
+						</div>
+						<div class="login-register">
+				            <a href="Login.html">Uloguj se</a>
+				         </div>
+					</form>
+				</div>
+			</div>
+		</div>	
+	</body>
+</html>
